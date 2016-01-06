@@ -695,8 +695,20 @@ img[src*=arrow]{
 		color: #fff;
 		margin-top: 55px;
 		text-align: right;
-		margin-right: 15px;
+		margin-right: 10px;
 		font-size: 45px;
+		font-family: "Source Sans Pro";
+		font-weight: 400;
+	}
+
+
+
+	.date-placeholder h3{
+		color: #fff;
+		margin-top: 10px;
+		text-align: center;
+		margin-right: 0px;
+		font-size: 20px;
 		font-family: "Source Sans Pro";
 		font-weight: 400;
 	}
@@ -704,7 +716,7 @@ img[src*=arrow]{
 	.date-placeholder p{
 		color: #fff;
 		text-align: right;
-		margin-right: 15px;
+		margin-right: 10px;
 		padding: 5px 0px
 	}
 

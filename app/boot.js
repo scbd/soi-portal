@@ -7,6 +7,7 @@ require.config({
         'authentication'   : 'services/authentication',
         'angular'          : 'libs/angular-flex/angular-flex',
         'angular-route'    : 'libs/angular-route/angular-route',
+        'moment'           : 'libs/moment/min/moment.min',
         'domReady'         : 'libs/requirejs-domready/domReady',
         'text'             : 'libs/requirejs-text/text',
         'bootstrap'        : 'libs/bootstrap/dist/js/bootstrap',
