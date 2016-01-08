@@ -1,9 +1,15 @@
+/* jshint node: true, browser: false */
 'use strict';
 
 // CREATE HTTP SERVER AND PROXY
 
 var app = require('express')();
+
 var httpProxy = require('http-proxy');
+
+app.set('views', __dirname + '/app');
+app.set('view engine', 'ejs');
+
 
 app.use(require('morgan')('dev'));
 
@@ -14,17 +20,18 @@ var proxy = httpProxy.createProxyServer({});
 
 // CONFIGURE /APP/* ROUTES
 
-app.use('/soi/app',   require('serve-static')(__dirname + '/app_build'));
-app.use('/soi/app',   require('serve-static')(__dirname + '/app'));
-app.all('/soi/app/*', function(req, res) { res.status(404).send(); } );
-
-// CONFIGURE TEMPLATE.HTML
-
-app.get('/soi',   function (req, res) { res.sendfile(__dirname + '/app/template.html'); });
-app.get('/soi/*', function (req, res) { res.sendfile(__dirname + '/app/template.html'); });
-
+app.use('/app',   require('serve-static')(__dirname + '/app_build'));
+app.use('/app',   require('serve-static')(__dirname + '/app'));
+app.all('/app/*', function(req, res) { res.status(404).send(); } );
 
 app.get( '/api/*' , function(req, res) {  proxy.web(req, res, { target: 'https://api.cbd.int', secure: false } ); } );
+
+// CONFIGURE TEMPLATE
+
+app.get('/*', function (req, res) { res.render('template', { baseUrl: req.headers.base_url || '/' }); });
+
+
+
 
 // START SERVER
 

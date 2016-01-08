@@ -1,29 +1,18 @@
 define(['app', 'moment', 'lodash'], function (app, moment, _) {
 
     app.controller('EventsController', ['$scope','$rootScope','$http', '$filter', function ($scope, $rootScope, $http, $filter) {
-        var nextMeetingQueryParameters = {
+        var basicQuery ={
             'q': 'schema_s:meeting AND title_t:*SOI*',
-            'fq': 'startDate_dt:[NOW TO *]',
-            'sort': 'startDate_dt asc',
             'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
             'wt': 'json',
             'start': 0,
             'rows': 10,
-            //'cb': new Date().getTime()
         };
 
-        var previousMeetingQueryParameters = {
-                'q': 'schema_s:meeting AND title_t:*SOI*',
-                'fq': 'startDate_dt:[* TO NOW]',
-                'sort': 'startDate_dt desc',
-                'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
-                'wt': 'json',
-                'start': 0,
-                'rows': 10,
-                //'cb': new Date().getTime()
-        };
+        var nextMeetingQueryParameters = _.assign({},basicQuery, {'fq': 'startDate_dt:[NOW TO *]'}, {'sort': 'startDate_dt asc'} );
+        var previousMeetingQueryParameters = _.extend({}, basicQuery, {'fq': 'startDate_dt:[* TO NOW]'}, {'sort': 'startDate_dt desc'} );
 
-        $http.get('/api/v2013/index/select', { params: nextMeetingQueryParameters})
+         $http.get('/api/v2013/index/select', { params: nextMeetingQueryParameters})
              .success(function (data) {
                 $scope.nextMeetings = _.map(data.response.docs, function(item)
                                 { var name=item.title_s; 
@@ -49,7 +38,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                   }
                                   var year=$filter('formatDate')(item.startDate_dt, 'YYYY');
                                   var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s}; 
-                                  //console.log(meeting);
+                                  
                                   return meeting;
                                 });
             }).error(function(error){$scope.nextMeetings=[]});
@@ -80,11 +69,10 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                   }
                                   var year=$filter('formatDate')(item.startDate_dt, 'YYYY');
                                   var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s}; 
-                                  //console.log(meeting);
+                                 
                                   return meeting;
                                 });
             }).error(function(error){$scope.previousMeetings=[]});
-
         }])
         .filter('formatDate', function(){
             return function(date,formart){
@@ -92,58 +80,9 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                     formart = 'DD MMM YYYY';
                 return moment.utc(date).format(formart);
             }
-        });
+        }); 
+
 });
-
-
-//define(['app', 'angular', 'authentication'], function() { 'use strict';//
-
-//	return ['$scope', '$rootScope', '$route', '$browser', '$location', '$window', 'authentication', '$http', function ($scope, $rootScope, $route, $browser, $location, $window, authentication, $http){//
-
-//		var nextMeetingQueryParameters = {
-//                'q': 'schema_s:meeting AND title_t:*SOI*',
-//                'fq': 'startDate_dt:[NOW TO *]',
-//                'sort': 'startDate_dt asc',
-//                'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
-//                'wt': 'json',
-//                'start': 0,
-//                'rows': 10,
-//                //'cb': new Date().getTime()
-//            };//
-
-//        var previousMeetingQueryParameters = {
-//                'q': 'schema_s:meeting AND title_t:*SOI*',
-//                'fq': 'startDate_dt:[* TO NOW]',
-//                'sort': 'startDate_dt asc',
-//                'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
-//                'wt': 'json',
-//                'start': 0,
-//                'rows': 10,
-//                //'cb': new Date().getTime()
-//            };
-//        
-//        var documentsBaseUrl = 'http://www.cbd.int/doc/?meeting=';
-//       
-//        $http.get('/api/v2013/index/select', { params: nextMeetingQueryParameters})
-//                 .success(function (data) {
-//                    $scope.nextMeetings = data.response.docs;
-//                    console.log('here');
-//                    console.log('$scope.nextMeetings', $scope.nextMeetings);
-//                }).error(function(error){$scope.nextMeetings=[]});//
-
-//        $http.get('/api/v2013/index/select', { params: previousMeetingQueryParameters})
-//                 .success(function (data) {
-//                    $scope.previousMeetings = data.response.docs;
-//                    console.log('here');
-//                    console.log('$scope.previoustMeetings', $scope.previousMeetings);
-//                }).error(function(error){$scope.previousMeetings=[]});
-       
-
-       
-            
-            
-                           // })
-                           // .finally(function(){$scope.loading = false;});
 
 		//$scope.nextMeetings = [
 //			{
