@@ -6,13 +6,12 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
             'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
             'wt': 'json',
             'start': 0,
-            'rows': 10,
         };
 
         var nextMeetingQueryParameters = _.assign({},basicQuery, {'fq': 'startDate_dt:[NOW TO *]'}, {'sort': 'startDate_dt asc'} );
         var previousMeetingQueryParameters = _.extend({}, basicQuery, {'fq': 'startDate_dt:[* TO NOW]'}, {'sort': 'startDate_dt desc'} );
 
-         $http.get('/api/v2013/index/select', { params: nextMeetingQueryParameters})
+         $http.get('https://api.cbd.int/api/v2013/index/select', { params: nextMeetingQueryParameters})
              .success(function (data) {
                 $scope.nextMeetings = _.map(data.response.docs, function(item)
                                 { var name=item.title_s; 
@@ -43,7 +42,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                 });
             }).error(function(error){$scope.nextMeetings=[]});
 
-        $http.get('/api/v2013/index/select', { params: previousMeetingQueryParameters})
+        $http.get('https://api.cbd.int/api/v2013/index/select', { params: previousMeetingQueryParameters})
              .success(function (data) {
                 $scope.previousMeetings = _.map(data.response.docs, function(item)
                                 { var name=item.title_s; 
