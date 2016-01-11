@@ -2,14 +2,13 @@
 
 	<div class="row-fluid events">
 		<div class="col-xs-6 col-md-6 nopaddingleft">
-
-			<div class="col-xs-6 col-md-6 square blue-box">
-				<h2 class="medium">Upcoming Events</h2>
-			</div>
-
+			
 			<div ng-repeat="meeting in nextMeetings">
 
 				<div ng-if="$first">
+					<div class="col-xs-6 col-md-6 square blue-box">
+						<h2 class="medium">Upcoming Events</h2>
+					</div>
 					<div class="col-xs-6 col-md-6 square textbox marginleft">
 						<a href="{{meeting.url}}"><h3 class="blue">{{meeting.name}}</h3></a>
 						<div class="push30"></div>
