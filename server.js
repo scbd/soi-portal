@@ -10,12 +10,9 @@ var httpProxy = require('http-proxy');
 app.set('views', __dirname + '/app');
 app.set('view engine', 'ejs');
 
-
-app.use(require('morgan')('dev'));
-
 // LOAD CONFIGURATION
 
-app.set('port', process.env.PORT || 2000);
+app.set('port', process.env.PORT || 8000);
 var proxy = httpProxy.createProxyServer({});
 
 // CONFIGURE /APP/* ROUTES
@@ -27,9 +24,6 @@ app.all('/app/*', function(req, res) { res.status(404).send(); } );
 // CONFIGURE TEMPLATE
 
 app.get('/*', function (req, res) { res.render('template', { baseUrl: req.headers.base_url || '/' }); });
-
-
-
 
 // START SERVER
 
