@@ -6,6 +6,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
             'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
             'wt': 'json',
             'start': 0,
+            'rows': 9999,
         };
 
         var nextMeetingQueryParameters = _.assign({},basicQuery, {'fq': 'startDate_dt:[NOW TO *]'}, {'sort': 'startDate_dt asc'} );
@@ -14,7 +15,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
          $http.get('https://api.cbd.int/api/v2013/index/select', { params: nextMeetingQueryParameters})
              .success(function (data) {
                 $scope.nextMeetings = _.map(data.response.docs, function(item)
-                                { var name=item.title_s; 
+                                { var name=item.title_s;
                                   var startDay =$filter('formatDate')(item.startDate_dt, 'DD');
                                   var endDay=  $filter('formatDate')(item.endDate_dt, 'DD');
                                   var days;
@@ -22,11 +23,11 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                     days = startDay;
                                   else
                                     days= startDay + "-" + endDay;
-                                  var startMonth = $filter('formatDate')(item.startDate_dt, 'MMMM');                         
-                                  
+                                  var startMonth = $filter('formatDate')(item.startDate_dt, 'MMMM');
+
                                   var endMonth = $filter('formatDate')(item.endDate_dt, 'MMMM');
                                   var startDate =  $filter('formatDate')(item.startDate_dt, 'DD, MMMM');
-                                  var endDate = $filter('formatDate')(item.endDate_dt, 'DD, MMMM')   
+                                  var endDate = $filter('formatDate')(item.endDate_dt, 'DD, MMMM')
                                   var month;
                                   if(startMonth==endMonth){
                                     month=startMonth;
@@ -36,8 +37,8 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                     month=startMonth + '//' + endMonth;
                                   }
                                   var year=$filter('formatDate')(item.startDate_dt, 'YYYY');
-                                  var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s}; 
-                                  
+                                  var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s};
+
                                   return meeting;
                                 });
             }).error(function(error){$scope.nextMeetings=[]});
@@ -45,7 +46,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
         $http.get('https://api.cbd.int/api/v2013/index/select', { params: previousMeetingQueryParameters})
              .success(function (data) {
                 $scope.previousMeetings = _.map(data.response.docs, function(item)
-                                { var name=item.title_s; 
+                                { var name=item.title_s;
                                   var startDay =$filter('formatDate')(item.startDate_dt, 'DD');
                                   var endDay=  $filter('formatDate')(item.endDate_dt, 'DD');
                                   var days;
@@ -53,11 +54,11 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                     days = startDay;
                                   else
                                     days= startDay + "-" + endDay;
-                                  var startMonth = $filter('formatDate')(item.startDate_dt, 'MMMM');                         
-                                  
+                                  var startMonth = $filter('formatDate')(item.startDate_dt, 'MMMM');
+
                                   var endMonth = $filter('formatDate')(item.endDate_dt, 'MMMM');
                                   var startDate =  $filter('formatDate')(item.startDate_dt, 'DD, MMMM');
-                                  var endDate = $filter('formatDate')(item.endDate_dt, 'DD, MMMM')   
+                                  var endDate = $filter('formatDate')(item.endDate_dt, 'DD, MMMM')
                                   var month;
                                   if(startMonth==endMonth){
                                     month=startMonth;
@@ -67,8 +68,8 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                                     month=startMonth + '//' + endMonth;
                                   }
                                   var year=$filter('formatDate')(item.startDate_dt, 'YYYY');
-                                  var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s}; 
-                                 
+                                  var  meeting={'name': item.title_s, 'days':days, 'startDate':startDate, 'endDate':endDate,'month':month,'year':year, 'city': item.eventCity_EN_t, 'country': item.eventCountry_EN_t, 'url': 'https://www.cbd.int/doc/?meeting=' + item.symbol_s};
+
                                   return meeting;
                                 });
             }).error(function(error){$scope.previousMeetings=[]});
@@ -79,7 +80,7 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
                     formart = 'DD MMM YYYY';
                 return moment.utc(date).format(formart);
             }
-        }); 
+        });
 
 });
 
@@ -137,5 +138,3 @@ define(['app', 'moment', 'lodash'], function (app, moment, _) {
 //		];
 //    }];
 //});
-
-
