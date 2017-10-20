@@ -39,6 +39,12 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 				thumbnail: 		'app/images/resources/170-soi-high-level-concluding-statement.jpg',
 				url: 			'https://www.cbd.int/marine/soi/soi-high-level-concluding-statement-en.pdf',
 				type:           'document'
+			}, {
+				name: 			'Interviews at the UN Ocean Conference, June 2017',
+				description: 	'Interviews at the UN Ocean Conference, June 2017',
+				thumbnail: 		'app/images/resources/170-soi-interview.jpg',
+				url: 			'resources/unoc-interviews',
+				type:           'document-list'
 			}
 		];
 	}];

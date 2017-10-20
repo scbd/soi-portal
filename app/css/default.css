@@ -212,8 +212,13 @@ a, a:hover{
 		text-decoration: underline;
 	}
 
-	div.organization a:hover, div.textbox a:hover{
+	div.organization a:hover, div.textbox a:hover {
 		text-decoration: none;
+	}
+
+	div.carousel-inner a:hover{
+		text-decoration: none;
+		font-size: 14px;
 	}
 
 /** Header TITLES STYLES */
@@ -680,6 +685,57 @@ img[src*=arrow]{
 	position: absolute;
 	bottom: 7px;
 	right: 7px;
+}
+
+.name-font{
+	font-size:18px;
+	line-height:180%;
+	font-weight:500;
+	font-style: italic
+}
+
+.title-font{
+	font-size:15px;
+	line-height:120%
+}
+.carousel-text {
+    
+	position:absolute;
+	top:260px;
+	left:0;right:0;
+	height:100px;
+	background-color:
+	rgba(0,0,0,0.6);
+	color:#fff;
+	padding:10px 15px;
+	font-size:12px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+}
+.carousel-text h4{
+	color:#fff!important;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin-top: 0px;
+}
+
+.carousel-link{
+	color:white;
+	font-size:25px;
+	line-height: 25px;
+}
+.color-white{
+    color:#fff!important;	
+	font-size:14px;	
+	line-height: 140%;
+	font-family: 'Lato', sans-serif;
+    font-weight: 400!important;
+    line-height: 26px!important;
+    margin-top: 0px;
 }
 
 /**

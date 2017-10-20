@@ -73,7 +73,8 @@ define(['app', 'authentication'], function(app) { 'use strict';
                             '/resources/brochures':             { name: 'Brochures' },
                             '/resources/cbd-materials':         { name: 'SOI/CBD Materials' },
                             '/resources/relevant-resources':    { name: 'Other Relevant Resources' },
-                            '/resources/background-materials':  { name: 'Background Materials' }
+                            '/resources/background-materials':  { name: 'Background Materials' },
+                            '/resources/unoc-interviews':       { name: 'UNOC Interviews' }
                         }
                     },
                     '/experiences':                             { name: 'Experiences' },

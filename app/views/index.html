@@ -3,73 +3,30 @@
     <div class="push15 clear">&nbsp;</div>
 
     <div class="row">
-
         <div class="col-xs-7 col-lg-7">
 
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:360px;overflow-y:hidden">
                 <ol class="carousel-indicators" style="top:20px;bottom:initial">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                    <li data-target="#carousel-example-generic" ng-repeat="item in carouselData.items" data-slide-to="{{$index}}" ng-class="{active: $index==0}"></li>
+                    
                 </ol>
+                
                 <div class="carousel-inner">
-                    <div class="item active"><img src="app/images/carousel/turtle.jpg" alt="Sea turtle" style="width:100%"></div>
-                    <div class="item">
-                        <img src="app/images/carousel/braulio-dias.jpg" alt="Braulio Dias" style="width:100%">
-                        <div style="position:absolute;top:240px;left:0;right:0;height:100px;background-color:rgba(0,0,0,0.75);color:#fff;padding:10px 15px;font-size:12px;display:flex;justify-content:center;align-items:center;">
-                            <center>
-                                "The Sustainable Ocean Initiative provides a key opportunity to address capacity gaps by
-                                building partnerships that can provide for targeted capacity building, training, technical
-                                assistance and learning exchange. I encourage you all to share the vision and mission of the
-                                Substainable Ocean Initiative and contribute to a substantial future for our oceans for
-                                generations to come."
-                                <div style="margin-top:6px;font-style:italic">Braulio Ferriera de Souza Dias, Executive Secretary, Convention on Biological Diversity</div>
-                            </center>
-                        </div>
+                    <div class="item" ng-repeat="item in carouselData.items" ng-class="{active: $index==0}">
+                            <img ng-src="{{item.imageUrl}}" alt="{{item.title}}" style="width:100%">
+                            
+                            <div class="carousel-text"  >
+                                <center>
+                                    <h4 class="color-white">{{item.title}}</h4>                                  
+                                        
+                                        <span xstyle='border:solid red 1px'><a class="color-white" ng-href="{{item.targetUrl}}">Read More ></a></span>
+                                       
+                                    
+                                </center>&nbsp;
+                            </div>
                     </div>
-                    <div class="item"><img src="app/images/carousel/turquoise-boat.jpg" alt="Boat" style="width:100%"></div>
-                    <div class="item">
-                        <img src="app/images/carousel/barbara-thompson.jpg" alt="Brbara Thompson" style="width:100%">
-                        <div style="position:absolute;top:240px;left:0;right:0;height:100px;background-color:rgba(0,0,0,0.75);color:#fff;padding:10px 15px;font-size:12px;display:flex;justify-content:center;align-items:center;">
-                            <center>
-                                "[SOI] has helped us build capacity as well as bring in a collaborative approach, regionally
-                                and globally. Support such as this and our own programmes gives us real hope that we will be
-                                 able to meet most of the Aichi Biodiversity Targets by 2020."
-                                <div style="margin-top:6px;font-style:italic">Barbara Thompson, Deputy Minister of Environmental Affairs, South Africa</div>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="item"><img src="app/images/carousel/blue-fishes.jpg" alt="Blue fishes" style="width:100%"></div>
-                    <div class="item">
-                        <img src="app/images/carousel/xavier-sticker.jpg" alt="Xavier Sticker" style="width:100%">
-                        <div style="position:absolute;top:240px;left:0;right:0;height:100px;background-color:rgba(0,0,0,0.75);color:#fff;padding:10px 25px;font-size:12px;display:flex;justify-content:center;align-items:center;">
-                            <center>
-                                "The task is enormous, as are the challenges. They are as big as the ocean is deep. We
-                                must rise to those challenges, and SOI is part of our common response."
-                                <div style="margin-top:6px;font-style:italic">Xavier Sticker, Ambassador for Environment, France</div>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="item"><img src="app/images/carousel/beige-coral.jpg" alt="Beige Coral" style="width:100%"></div>
-                    <div class="item">
-                        <img src="app/images/carousel/marco-tax.jpg" alt="Marco Tax" style="width:100%">
-                        <div style="position:absolute;top:240px;left:0;right:0;height:100px;background-color:rgba(0,0,0,0.75);color:#fff;padding:10px 25px;font-size:12px;display:flex;justify-content:center;align-items:center;">
-                            <center>
-                                "We want to reaffirm our commitment to the ecosystem approach in the management of our biological
-                                diversity and the maintenance of ecosystem services, trusting that through cooperation initiatives,
-                                like SOI and other partners, [we will be able to] to achieve it."
-                                <div style="margin-top:6px;font-style:italic">Marco Tax, Executive Sub-Secretary, National Council of Protected Areas, Guatemala</div>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="item"><img src="app/images/carousel/blue-boats.jpg" alt="Boats" style="width:100%"></div>
                 </div>
+                    
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
@@ -87,12 +44,12 @@
             <div class="push15"></div>
             <div class="textbox" style="height:214px">
 
-                <div class="col-xs-12" style="margin-top:30px;">
-                    <div class="col-xs-3" style="line-height:36px;"> <a href="https://www.cbd.int/doc/meetings/mar/soiom-2014-02/official/soiom-2014-02-actionplan-en.pdf" class="blue-light" ><i class="fa fa-file-pdf-o fa-4x pull-right" aria-hidden="true"></i></div>
-                              <div class="col-xs-9">   <a href="https://www.cbd.int/doc/meetings/mar/soiom-2014-02/official/soiom-2014-02-actionplan-en.pdf" > <h3 class="blue-light" style="font-size:1.4em;line-height:3em;" >SOI Action Plan 2015-2020</h3></a></div>
+                <div class="col-xs-12" style="margin-top:10px;">
+                    <div class="col-xs-3" ><a href="https://www.cbd.int/doc/meetings/mar/soiom-2014-02/official/soiom-2014-02-actionplan-en.pdf" class="blue-light" ><img src='/app/images/action-plan.png' class='pull-right'></a></div>
+                              <div class="col-xs-9">   <a href="https://www.cbd.int/doc/meetings/mar/soiom-2014-02/official/soiom-2014-02-actionplan-en.pdf" > <h3 class="blue-light" style="font-size:1.4em;line-height:4em;" >SOI Action Plan 2015-2020</h3></a></div>
                 </div>
                 <div class="col-xs-12" style="margin-top:20px;">
-                    <div class="col-xs-3"> <a href="https://www.cbd.int/marine/soi/soi-high-level-concluding-statement-en.pdf" class="blue-light"><i class="fa fa-file-pdf-o fa-4x pull-right" aria-hidden="true"></i></div>
+                    <div class="col-xs-3"> <a href="https://www.cbd.int/marine/soi/soi-high-level-concluding-statement-en.pdf" class="blue-light"><img src='/app/images/cop-12-logo.png' class='pull-right'></a></div>
                               <div class="col-xs-9" >  <a href="https://www.cbd.int/marine/soi/soi-high-level-concluding-statement-en.pdf" ><h3 class="blue-light" style="font-size:1.4em;line-height:1em;" >2014 Sustainable Ocean Initiative <br>High-level Meeting Pyeongchang Statement</h3></a></div>
                 </div>
             </div>
@@ -102,11 +59,40 @@
     <div class="push50 clear">&nbsp;</div>
 
     <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-6 col-sm-3 square blue-light-box" style='margin-lfet:8px'>
+        <div class="col-xs-6 col-sm-3 square blue-light-box" style='margin-left:8px'>
             <h2 class="large">SOI<br />News</h2>
         </div>
 
         <div class="col-xs-6 col-sm-3 square textbox marginleft">
+            <a href="http://enb.iisd.org/oceans/sdg14conference/cbd-partners/about.html"><h3 class="blue-light">SOI at the UN Ocean Conference </h3></a>
+            <div class="push15"></div>
+            <p>SOI took center stage at the UN Ocean Conference in June 2017, where the CBD Secretariat and SOI partners organized the high-level Sustainable Ocean Night reception and two side events on SOI efforts.  The CBD Executive Security discussed SOI in her presentation as a panelist for the Partnership Dialogues. SOI efforts were formally registered as voluntary commitments for the Conference. 
+            </p>
+            <a href="http://enb.iisd.org/oceans/sdg14conference/cbd-partners/about.html" class="arrow-more_blue-light">&nbsp;</a>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 square textbox marginleft">
+            <a href="https://www.cbd.int/doc/?meeting=SOIWS-2017-01"><h3 class="blue-light">SOI Capacity-Building Workshop for the WCCA </h3></a>
+            <div class="push15"></div>
+            <p>Convened in February 2017, this workshop brought together practitioners from governments, regional organizations and local communities to share experiences and challenges in implementation and to outline strategies for enhancing integrated management. It included a session to share experiences on the role of traditional knowledge and indigenous peoples and local communities in marine spatial planning.
+            </p>
+            <a href="https://www.cbd.int/doc/?meeting=SOIWS-2017-01" class="arrow-more_blue-light">&nbsp;</a>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 square textbox marginleft">
+            <a href="/events"><h3 class="blue-light">SOI National Workshops for Timor-Leste and Vanuatu </h3></a>
+            <div class="push15"></div>
+            <p>In 2016, SOI convened national-level capacity building workshops for Timor-Leste and Vanuatu. Organized with CSIRO/Australia and other partners, these workshops focused on supporting the development of strategies for marine spatial planning. In Vanuatu, this focused specifically on strategies to implement its recently adopted National Ocean Policy.
+            </p>
+            <a href="/events" class="arrow-more_blue-light">&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="clear push30">&nbsp;</div>
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-6 col-sm-3 square textbox">
             <a href="https://www.cbd.int/doc/?meeting=SOIWS-2016-03"><h3 class="blue-light">SOI / Pacific Ocean Alliance Regional Workshop for the Pacific Islands</h3></a>
             <div class="push15"></div>
             <p>31 October - 4 November 2016, Apia, Samoa</p>
@@ -127,25 +113,26 @@
         </div>
 
         <div class="col-xs-6  col-sm-3  square textbox marginleft">
-            <a href="/soi/events"><h3 class="blue-light">SOI National Workshops Convened for Namibia and Samoa</h3></a>
+            <a href="/events"><h3 class="blue-light">SOI National Workshops Convened for Namibia and Samoa</h3></a>
             <div class="push15"></div>
             <p>In 2015, SOI convened national-level capacity development workshops for Namibia and Samoa, in collaboration with the governments of Namibia and Samoa, respectively, as well as relevant organizations. These workshops brought together a wide range of stakeholders from across sectors to address specific national-level capacity needs in order to facilitate improved implementation.
             </p>
-            <a href="/soi/events" class="arrow-more_blue-light20">&nbsp;</a>
+            <a href="/events" class="arrow-more_blue-light20">&nbsp;</a>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 square textbox marginleft">
+            <a href="https://www.cbd.int/doc/publications/cbd-ts-76-en.pdf"><h3 class="blue-light">CBD Publishes Guidance for Integrated Coastal Management</h3></a>
+            <div class="push15"></div>
+            <p>The CBD Secretariat, in collaboration with PEMSEA and with the support of the government of Japan, produced CBD Technical Series report no.76, which provides guidance for integrated coastal management.  This guidance on based on the many experiences of PEMSEA in supporting ICM implementation in the Seas of East Asia.</p>
+            <a href="https://www.cbd.int/doc/publications/cbd-ts-76-en.pdf" class="arrow-more_blue-light">&nbsp;</a>
         </div>
     </div>
 
     <div class="clear push30">&nbsp;</div>
 
     <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-6 col-sm-3 square textbox">
-            <a href="https://www.cbd.int/doc/publications/cbd-ts-76-en.pdf"><h3 class="blue-light">CBD Publishes Guidance for Integrated Coastal Management</h3></a>
-            <div class="push15"></div>
-            <p>The CBD Secretariat, in collaboration with PEMSEA and with the support of the government of Japan, produced CBD Technical Series report no.76, which provides guidance for integrated coastal management.  This guidance on based on the many experiences of PEMSEA in supporting ICM implementation in the Seas of East Asia.</p>
-            <a href="https://www.cbd.int/doc/publications/cbd-ts-76-en.pdf" class="arrow-more_blue-light">&nbsp;</a>
-        </div>
 
-        <div class="col-xs-6 col-sm-3 square textbox marginleft">
+        <div class="col-xs-6 col-sm-3 square textbox ">
             <img src="app/images/new-website.jpg" alt="printscreen new website" />
             <div class="push5"></div><div class="push5"></div>
             <h3 class="blue-light">SOI Website Launched</h3>
@@ -153,8 +140,8 @@
             <p>The Sustainable Ocean Initiative has launched this website as a means to improve information-sharing and awareness regarding the activities of SOI and its many partners, and to facilitate connectivity and coordination among SOI partners.</p>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
-            <iframe width="473" height="266" class="pull-right" src="https://www.youtube.com/embed/4q6RiihseQ8" frameborder="0" allowfullscreen></iframe>
+        <div class="col-xs-6 col-sm-6" style="margin-left:10px">
+            <iframe width="473" height="266"  src="https://www.youtube.com/embed/4q6RiihseQ8" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
