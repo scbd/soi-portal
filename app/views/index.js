@@ -21,7 +21,7 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							imageUrl: "app/images/carousel/soi-marine-biodiversity-video.jpg",
 							targetUrl: "https://www.youtube.com/watch?v=73hSF4kC0Lg"
 						}, {
-							title: "Blue Solutions Panorama",
+							title: "PANORAMA portal hosted by Blue Solutions",
 							description: "",
 							imageUrl: "app/images/carousel/blue-solutions.jpg",
 							targetUrl: "http://panorama.solutions/en/portal/marine-coastal"
