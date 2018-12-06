@@ -4,3 +4,4 @@ app/libs
 app_build
 .DS_Store
 .vscode/settings.json
+package-lock.json

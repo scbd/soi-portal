@@ -14,7 +14,7 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 				description: 	'CBD Technical Series Reports',
 				thumbnail: 		'app/images/resources/170-technical-series_brochure.jpg',
 				url: 			'https://www.cbd.int/ts/',
-				type:           'document-list'
+				type:           'web-link'
 			}, {
 				name: 			'Reports of the CBD Regional EBSA Workshops',
 				description: 	'Reports of the CBD Regional EBSA Workshops',
@@ -44,7 +44,13 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 				description: 	'Interviews at the UN Ocean Conference, June 2017',
 				thumbnail: 		'app/images/resources/170-soi-interview.jpg',
 				url: 			'resources/unoc-interviews',
-				type:           'document-list'
+				type:           'web-link'
+			}, {
+				name: 			'CBD Coral Reef Portal',
+				description: 	'CBD Coral Reef Portal',
+				thumbnail: 		'app/images/resources/170-coral-reefs.png',
+				url: 			'https://www.cbd.int/coral-reefs/',
+				type:           'web-link'
 			}
 		];
 	}];
