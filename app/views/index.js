@@ -39,7 +39,7 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							title: "Perspectives on Marine Biodiversity and Sustainable Development: Interviews at the UN Ocean Conference",
 							imageUrl: "app/images/carousel/soi-interview.jpg",
 							targetUrl: "resources/unoc-interviews"
-						},
+						}
 
 					]
 				};
