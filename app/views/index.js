@@ -6,6 +6,10 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
+							imageUrl: "app/images/carousel/sod-cop14.jpg",
+							targetUrl: "http://enb.iisd.org/biodiv/cop14/sustainable-ocean-day/ "
+						}, {
 							title: "Sustainable Ocean Night at UN Ocean Conference",
 							description: "Sustainable Ocean Night at UN Ocean Conference",
 							imageUrl: "app/images/carousel/soi-oc-group-photo.jpg",
@@ -39,10 +43,6 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							title: "Perspectives on Marine Biodiversity and Sustainable Development: Interviews at the UN Ocean Conference",
 							imageUrl: "app/images/carousel/soi-interview.jpg",
 							targetUrl: "resources/unoc-interviews"
-						}, {
-							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
-							imageUrl: "app/images/carousel/sod-cop14.jpg",
-							targetUrl: "http://enb.iisd.org/biodiv/cop14/sustainable-ocean-day/ "
 						}
 
 					]
