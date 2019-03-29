@@ -14,7 +14,7 @@ html {
 	height: 100%;
 }
 
-.wrapper.{
+.wrapper{
 	width:100%;
 }
 
@@ -31,6 +31,11 @@ html {
 
 .push5{
 	height: 5px;
+	display: block;
+}
+
+.push10{
+	height: 10px;
 	display: block;
 }
 
@@ -374,6 +379,10 @@ div.title{
 
 .imgsize{
 	height: 200px;
+	display: block;
+}
+.imgsize223{
+	height: 223px;
 	display: block;
 }
 
@@ -751,7 +760,7 @@ img[src*=arrow]{
 }
 
 .date-placeholder{
-	width: 136px;
+	width: 180px;
 	height: 137px;
 }
 
