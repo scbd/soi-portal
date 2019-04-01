@@ -759,6 +759,12 @@ img[src*=arrow]{
 	margin:-5px 5px 0px 0px;
 }
 
+.events li>a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
 .date-placeholder{
 	width: 136px;
 	height: 137px;
