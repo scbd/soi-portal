@@ -16,6 +16,7 @@ define(['app', 'lodash', 'text!views/index.html?', 'views/index', 'providers/ext
             when('/events',                                   { templateUrl: 'views/events/index.html',          resolveController: true }).
 
             when('/training',                                 { templateUrl: 'views/training/index.html',        resolveController: true }).
+            when('/training/soi-training-modules',           { templateUrl: 'views/training/soi-training-modules.html',      resolveController: true}).
 
             when('/resources',                                { templateUrl: 'views/resources/index.html',                resolveController: false }).
             when('/resources/brochures',                      { templateUrl: 'views/resources/brochures.html',            resolveController: true  }).
@@ -23,7 +24,8 @@ define(['app', 'lodash', 'text!views/index.html?', 'views/index', 'providers/ext
             when('/resources/relevant-resources',             { templateUrl: 'views/resources/relevant-resources.html',   resolveController: true  }).
             when('/resources/background-materials',           { templateUrl: 'views/resources/background-materials.html', resolveController: true  }).
             when('/resources/unoc-interviews',                { templateUrl: 'views/resources/unoc-interviews.html',      resolveController: false }).
-            when('/resources/target11-interviews',                { templateUrl: 'views/resources/target11-interviews.html',      resolveController: false }).
+            when('/resources/target11-interviews',            { templateUrl: 'views/resources/target11-interviews.html',      resolveController: false }).
+            
 
             when('/experiences',                              { templateUrl: 'views/experiences/index.html',         resolveController: false }).
             when('/partners',                                 { templateUrl: 'views/partners/index.html',            resolveController: false }).

@@ -4,6 +4,12 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 
 		$scope.documents = [
 			{
+				name: 			'SOI Training Modules',
+				description: 	'SOI Training Modules',
+				thumbnail: 		'https://www.cbd.int/marine/soi/soi-training-modules/SOI-training-modules.jpg',
+				url: 			'training/soi-training-modules',
+				type:           'website'
+			}, {
 				name: 			'Guidelines on Marine Protected Areas and Fisheries',
 				description: 	'Guidelines on Marine Protected Areas and Fisheries',
 				thumbnail: 		'app/images/training/guidelines-MPAF.jpg',
