@@ -6,6 +6,11 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "SOI Global Dialogue",
+							imageUrl: "app/images/carousel/soi-global-dialogue.png",
+							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2021-01 "
+						},
+						{
 							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
 							imageUrl: "app/images/carousel/sod-cop14.jpg",
 							targetUrl: "http://enb.iisd.org/biodiv/cop14/sustainable-ocean-day/ "
