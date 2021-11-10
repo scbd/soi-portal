@@ -6,7 +6,7 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
-							title: "SOI Global Dialogue",
+							title: "SOI Global Dialogue Intersessional Workshop",
 							imageUrl: "app/images/carousel/soi-global-dialogue.png",
 							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2021-01 "
 						},
