@@ -9,15 +9,12 @@ const basePath = path.join('/', process.env.BASE_PATH||'/', '/');
 
 if(!process.env.BASE_PATH) console.error(`WARNING: environment BASE_PATH not set. USING default`);
 
-var httpProxy = require('http-proxy');
-
 app.set('views', __dirname + '/app');
 app.set('view engine', 'ejs');
 
 // LOAD CONFIGURATION
 
 app.set('port', process.env.PORT || 8000);
-var proxy = httpProxy.createProxyServer({});
 
 // CONFIGURE /APP/* ROUTES
 
@@ -33,7 +30,6 @@ appRoutes.get('/*',     (req, res) => res.render('template', { baseUrl: basePath
 app.use(basePath, appRoutes);
 
 if(basePath!='/') app.use('/', appRoutes); // temps support for transition to Traefik 2 / AWS ALB
-
 
 app.listen(app.get('port'), function () {
 	console.log('Server listening on %j', this.address());
