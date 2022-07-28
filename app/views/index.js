@@ -9,17 +9,11 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							title: "SOI Global Dialogue Intersessional Workshop",
 							imageUrl: "app/images/carousel/soi-global-dialogue.png",
 							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2021-01 "
-						},
-						{
+						},{
 							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
 							imageUrl: "app/images/carousel/sod-cop14.jpg",
 							targetUrl: "http://enb.iisd.org/biodiv/cop14/sustainable-ocean-day/ "
-						}, {
-							title: "Sustainable Ocean Night at UN Ocean Conference",
-							description: "Sustainable Ocean Night at UN Ocean Conference",
-							imageUrl: "app/images/carousel/soi-oc-group-photo.jpg",
-							targetUrl: "http://enb.iisd.org/oceans/sdg14conference/cbd-partners/6jun.html"
-						}, {
+						},{
 							title: "Sustainable Ocean Initiative video",
 							description: "",
 							imageUrl: "app/images/carousel/soi-video.jpg",
@@ -35,19 +29,10 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							imageUrl: "app/images/carousel/blue-solutions.jpg",
 							targetUrl: "http://panorama.solutions/en/portal/marine-coastal"
 						}, {
-							title: "CBD and Partners at the UN Ocean Conference",
-							description: "",
-							imageUrl: "app/images/carousel/cbd-ocean-conference.jpg",
-							targetUrl: "http://enb.iisd.org/oceans/sdg14conference/cbd-partners/about.html"
-						}, {
 							title: "SOI Global Dialogue with Regional Seas Organizations and Regional Fisheries Bodies",
 							description: "",
 							imageUrl: "app/images/carousel/soiom-2016-01-group-photo.jpg",
-							targetUrl: "https://www.cbd.int/doc/?meeting=SOIOM-2016-01"
-						}, {
-							title: "Perspectives on Marine Biodiversity and Sustainable Development: Interviews at the UN Ocean Conference",
-							imageUrl: "app/images/carousel/soi-interview.jpg",
-							targetUrl: "resources/unoc-interviews"
+							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2018-01"
 						}
 
 					]

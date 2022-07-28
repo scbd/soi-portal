@@ -37,10 +37,10 @@ app.listen(app.get('port'), function () {
 });
 
 function toBasePath(dir) {
-    return path.join('/', dir || '/', '/');
+    return path.join('/', dir || '/', '/').replace(/\\/g, "/");
 }
 
 function urlSafe(dir) {
     var parts = dir.split('/').map(o=>encodeURIComponent(o));
-    return path.join.apply(null, parts.map(o=>o||'/'));
+    return path.join.apply(null, parts.map(o=>o||'/')).replace(/\\/g, "/");
 }

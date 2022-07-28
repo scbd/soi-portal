@@ -27,7 +27,7 @@ define(['app', 'lodash', 'text!views/index.html?', 'views/index', 'providers/ext
             when('/resources/target11-interviews',            { templateUrl: 'views/resources/target11-interviews.html',      resolveController: false }).
             
 
-            when('/experiences',                              { templateUrl: 'views/experiences/index.html',         resolveController: false }).
+            
             when('/partners',                                 { templateUrl: 'views/partners/index.html',            resolveController: false }).
             when('/aligned-initiatives',                      { templateUrl: 'views/aligned-initiatives/index.html', resolveController: true  }).
 
