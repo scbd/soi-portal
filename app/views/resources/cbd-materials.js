@@ -4,6 +4,34 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 
 		$scope.documents = [
 			{
+				name: 			'Busan outcome',
+				description: 	'Busan outcome',
+				thumbnail: 		'app/images/resources/170-busan-outcome-2022.png',
+				url: 			'https://www.cbd.int/doc/c/423d/f5cd/e40e990d94018939ec8a9df6/soi-om-2022-outcomes-en.pdf',
+				type:           'document'
+			}, 
+			{
+				name: 			'SOI: 10 years of building capacity and catalyzing partnerships to achieve global ocean goals ',
+				description: 	'SOI: 10 years of building capacity and catalyzing partnerships to achieve global ocean goals ',
+				thumbnail: 		'app/images/resources/170-soi-10years.png',
+				url: 			'https://www.cbd.int/marine/soi/booklet-soi-10years-en.pdf',
+				type:           'document'
+			}, 
+			{
+				name: 			'Seoul Outcome +2',
+				description: 	'Seoul Outcome +2 ',
+				thumbnail: 		'app/images/resources/170-seoul-outcome-2.png',
+				url: 			'https://www.cbd.int/doc/c/a3e1/53e3/08fc2a8f36e21b2366d03aa9/soi-om-2018-01-02-en.pdf',
+				type:           'document'
+			}, 
+			{
+				name: 			'Seoul Outcome',
+				description: 	'Seoul Outcome',
+				thumbnail: 		'app/images/resources/170-seoul-outcome.png',
+				url: 			'https://www.cbd.int/marine/soi/soi-seoul-outcome-brochure-en.pdf',
+				type:           'document'
+			}, 
+			{
 				name: 			'SOI Action Plan 2015-2020',
 				description: 	'SOI Action Plan 2015-2020',
 				thumbnail: 		'app/images/resources/170-actionplan-en.jpg',

@@ -6,6 +6,16 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "3rd SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
+							imageUrl: "app/images/carousel/soi-om-2022-01-group-photo.jpg",
+							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2022-01"
+						},
+						{
+							title: "SOI: 10 years of building capacity and catalyzing partnerships to achieve global ocean goals",
+							imageUrl: "app/images/carousel/boolet-soi-10years.png",
+							targetUrl: "https://www.cbd.int/marine/soi/booklet-soi-10years-en.pdf"
+						},
+						{
 							title: "SOI Global Dialogue Intersessional Workshop",
 							imageUrl: "app/images/carousel/soi-global-dialogue.png",
 							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2021-01 "
