@@ -1,10 +1,11 @@
-FROM node:6.9
+FROM node:14.3-alpine
 
 WORKDIR /usr/src/app
 
 COPY package.json bower.json .bowerrc .npmrc ./
 
-RUN npm install -q
+RUN apk add git curl && \
+    yarn install -q
 
 ENV PORT 8000
 EXPOSE 8000
