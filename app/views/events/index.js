@@ -3,7 +3,7 @@
 
       app.controller('EventsController', ['$scope','$rootScope','$http', '$filter', function ($scope, $rootScope, $http, $filter) {
           var basicQuery ={
-              'q': 'schema_s:meeting AND title_t:*SOI*',
+              'q': 'schema_s:meeting AND themes_ss:CBD-SUBJECT-MAR AND symbol_t:*SOI*',
               'fl': 'title_s, startDate_dt, endDate_dt, eventCity_EN_t, eventCountry_EN_t, symbol_s',
               'wt': 'json',
               'start': 0,
