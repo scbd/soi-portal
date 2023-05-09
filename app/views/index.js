@@ -14,11 +14,6 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							title: "SOI: 10 years of building capacity and catalyzing partnerships to achieve global ocean goals",
 							imageUrl: "app/images/carousel/boolet-soi-10years.png",
 							targetUrl: "https://www.cbd.int/marine/soi/booklet-soi-10years-en.pdf"
-						},
-						{
-							title: "SOI Global Dialogue Intersessional Workshop",
-							imageUrl: "app/images/carousel/soi-global-dialogue.png",
-							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2021-01 "
 						},{
 							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
 							imageUrl: "app/images/carousel/sod-cop14.jpg",
@@ -38,11 +33,6 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							description: "",
 							imageUrl: "app/images/carousel/blue-solutions.jpg",
 							targetUrl: "http://panorama.solutions/en/portal/marine-coastal"
-						}, {
-							title: "SOI Global Dialogue with Regional Seas Organizations and Regional Fisheries Bodies",
-							description: "",
-							imageUrl: "app/images/carousel/soiom-2016-01-group-photo.jpg",
-							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2018-01"
 						}
 
 					]
