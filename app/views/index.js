@@ -6,11 +6,20 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "4th SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
+							description: "",
+							imageUrl: "app/images/carousel/4SOI-GD.jpg",
+							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2024-01"
+						}, {
+							title: "SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies video",
+							description: "",
+							imageUrl: "app/images/carousel/SOI-GD.png",
+							targetUrl: "https://www.youtube.com/watch?v=Zw9pNO2bwU4"
+						}, {						
 							title: "3rd SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
 							imageUrl: "app/images/carousel/soi-om-2022-01-group-photo.jpg",
 							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2022-01"
-						},
-						{
+						}, {						
 							title: "SOI: 10 years of building capacity and catalyzing partnerships to achieve global ocean goals",
 							imageUrl: "app/images/carousel/boolet-soi-10years.png",
 							targetUrl: "https://www.cbd.int/marine/soi/booklet-soi-10years-en.pdf"
@@ -28,16 +37,6 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							description: "",
 							imageUrl: "app/images/carousel/soi-marine-biodiversity-video.jpg",
 							targetUrl: "https://www.youtube.com/watch?v=73hSF4kC0Lg"
-						}, {
-							title: "SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies video",
-							description: "",
-							imageUrl: "app/images/carousel/SOI-GD.png",
-							targetUrl: "https://www.youtube.com/watch?v=Zw9pNO2bwU4"
-						}, {
-							title: "4th SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
-							description: "",
-							imageUrl: "app/images/carousel/4SOI-GD.jpg",
-							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2024-01"
 						}
 
 					]
