@@ -29,10 +29,15 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							imageUrl: "app/images/carousel/soi-marine-biodiversity-video.jpg",
 							targetUrl: "https://www.youtube.com/watch?v=73hSF4kC0Lg"
 						}, {
-							title: "PANORAMA portal hosted by Blue Solutions",
+							title: "SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies video",
 							description: "",
-							imageUrl: "app/images/carousel/blue-solutions.jpg",
-							targetUrl: "http://panorama.solutions/en/portal/marine-coastal"
+							imageUrl: "app/images/carousel/SOI-GD.png",
+							targetUrl: "https://www.youtube.com/watch?v=Zw9pNO2bwU4"
+						}, {
+							title: "4th SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
+							description: "",
+							imageUrl: "app/images/carousel/4SOI-GD.jpg",
+							targetUrl: "https://www.cbd.int/meetings/SOI-OM-2024-01"
 						}
 
 					]
