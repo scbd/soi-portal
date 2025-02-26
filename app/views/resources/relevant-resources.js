@@ -4,6 +4,18 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 
 		$scope.documents = [
 			{
+				name: 			'FAO Handbook on Fisheries 233-OECMs',
+				description: 	'FAO Handbook on Fisheries 233-OECMs',
+				thumbnail: 		'app/images/resources/170-FAO-handbook-fisheries-OECM.png',
+				url: 			'https://openknowledge.fao.org/server/api/core/bitstreams/822cfedc-a209-4b73-ac2e-b3cb4c10f3eb/content',
+				type:           'document'
+			}, {
+				name: 			'IUCN Guidelines on OECMs',
+				description: 	'IUCN Guidelines on OECMs',
+				thumbnail: 		'app/images/resources/170-IUCN-OECM.png',
+				url: 			'https://portals.iucn.org/library/node/48773',
+				type:           'document'
+			}, {
 				name: 			'FAO: Geographic Information Systems to support the ecosystem approach to fisheries',
 				description: 	'FAO: Geographic Information Systems to support the ecosystem approach to fisheries',
 				thumbnail: 		'app/images/resources/170-fao-geographic_brochure.jpg',

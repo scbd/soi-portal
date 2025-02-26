@@ -4,6 +4,20 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 
 		$scope.documents = [
 			{
+				name: 			'SOI Post-2020 Action Plan (2020-2025)',
+				description: 	'SOI Post-2020 Action Plan (2020-2025)',
+				thumbnail: 		'app/images/resources/170-post-2020-soi-actionplan.png',
+				url: 			'https://www.cbd.int/marine/soi/Post-2020-SOI-ActionPlan-en.pdf',
+				type:           'document'
+			}, 
+			{
+				name: 			'Report of the 4th SOI Global Dialogue',
+				description: 	'Report of the 4th SOI Global Dialogue',
+				thumbnail: 		'app/images/resources/170-soi-gd-rso-rfb-04.png',
+				url: 			'https://www.cbd.int/doc/c/cb6a/08b8/41d13ec1348143b5b4e5f187/soi-om-2024-01-report-en.pdf',
+				type:           'document'
+			}, 
+			{
 				name: 			'Busan outcome',
 				description: 	'Busan outcome',
 				thumbnail: 		'app/images/resources/170-busan-outcome-2022.png',

@@ -6,6 +6,16 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "SOI Workshop for Africa’s Atlantic & Mediterranean coasts",
+							description: "",
+							imageUrl: "app/images/carousel/SOI-WS-2025-01.jpg",
+							targetUrl: "https://www.cbd.int/meetings/SOI-WS-2025-01"
+						}, {
+							title: "Ocean Day at CBD COP 16: Ocean as the Great Connector",
+							description: "",
+							imageUrl: "app/images/carousel/ocean-day-cop16.jpg",
+							targetUrl: "https://enb.iisd.org/ocean-day"
+						}, {
 							title: "4th SOI Global Dialogue with Regional Seas Organizations and Regional Fishery Bodies",
 							description: "",
 							imageUrl: "app/images/carousel/4SOI-GD.jpg",
@@ -24,15 +34,11 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 							imageUrl: "app/images/carousel/boolet-soi-10years.png",
 							targetUrl: "https://www.cbd.int/marine/soi/booklet-soi-10years-en.pdf"
 						},{
-							title: "Sustainable Ocean Day: Ocean Voices at CBD COP 14",
-							imageUrl: "app/images/carousel/sod-cop14.jpg",
-							targetUrl: "http://enb.iisd.org/biodiv/cop14/sustainable-ocean-day/ "
-						},{
 							title: "Sustainable Ocean Initiative video",
 							description: "",
 							imageUrl: "app/images/carousel/soi-video.jpg",
-							targetUrl: "https://www.youtube.com/watch?v=4q6RiihseQ8"
-						}, {
+							targetUrl: "https://www.youtube.com/watch?v=4q6RiihseQ8&ab_channel=ConventiononBiologicalDiversity"
+						},{
 							title: "Sustainable Oceans: Marine Biodiversity for the Future We Want",
 							description: "",
 							imageUrl: "app/images/carousel/soi-marine-biodiversity-video.jpg",
