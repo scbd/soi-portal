@@ -4,8 +4,8 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 
 		$scope.documents = [
 			{
-				name: 			'FAO Handbook on Fisheries 233-OECMs',
-				description: 	'FAO Handbook on Fisheries 233-OECMs',
+				name: 			'FAO Handbook on Fisheries OECMs',
+				description: 	'FAO Handbook on Fisheries OECMs',
 				thumbnail: 		'app/images/resources/170-FAO-handbook-fisheries-OECM.png',
 				url: 			'https://openknowledge.fao.org/server/api/core/bitstreams/822cfedc-a209-4b73-ac2e-b3cb4c10f3eb/content',
 				type:           'document'
