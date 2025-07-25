@@ -9,8 +9,7 @@
 					<img src="{{document.thumbnail}}" alt="{{document.name}}">					
 					<h3>{{document.description}}</h3>					
 					<a ng-if="document.type=='document'" href="{{document.url}}" title="{{document.name}}">English </a>
-					<span ng-if ="document.urlFr">|</span>
-					<a ng-if="document.type=='document' && document.urlFr" href="{{document.urlFr}}" > French</a>
+					<span ng-if ="document.type=='document' && document.urlFr">|<a href="{{document.urlFr}}" > French</a></span>					
 					<a ng-if="document.type=='document-list'" href="{{document.url}}" title="{{document.name}}">See the list <i class="fa fa-long-arrow-right"></i></a>
 					<a ng-if="document.type=='web-link'" href="{{document.url}}" title="{{document.name}}">Go to the website <i class="fa fa-long-arrow-right"></i></a>
 				</div>
