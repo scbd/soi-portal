@@ -6,6 +6,11 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "Intersessional Workshop of the SOI Global Dialogue with RSOs and RFBs",
+							description: "",
+							imageUrl: "app/images/carousel/soi-gd-rso-rfb.jpg",
+							
+						}, {
 							title: "SOI Workshop for Africa’s Atlantic & Mediterranean coasts",
 							description: "",
 							imageUrl: "app/images/carousel/SOI-WS-2025-01.jpg",
