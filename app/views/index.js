@@ -6,9 +6,14 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "SOI National Workshop for Malaysia",
+							description: "",
+							imageUrl: "app/images/carousel/soi-malaysia-workshop-202508.jpg",
+							targetUrl: "https://www.cbd.int/marine/soi/soi-malaysia-workshop-202508-report-en.pdf"
+						}, {
 							title: "Intersessional Workshop of the SOI Global Dialogue with RSOs and RFBs",
 							description: "",
-							imageUrl: "app/images/carousel/soi-gd-rso-rfb.jpg",
+							imageUrl: "app/images/carousel/soi-gd-rso-rfb.jpg"
 							
 						}, {
 							title: "SOI Workshop for Africa’s Atlantic & Mediterranean coasts",
