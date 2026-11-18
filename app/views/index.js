@@ -6,6 +6,16 @@ define(['app', 'angular', 'authentication'], function() { 'use strict';
 		$scope.carouselData=  {
 					items :[
 						{
+							title: "Sustainable Ocean Night at COP 17, Yerevan, Armenia",
+							description: "",
+							imageUrl: "app/images/carousel/Minister-addressing.jpg"
+						}, 
+						{
+							title: "Fifth SOI Global Dialogue with RSOs and RFBs",
+							description: "",
+							imageUrl: "app/images/carousel/Participants-group-photo.jpg"
+						}, 
+						{
 							title: "SOI National Workshop for the Philippines",
 							description: "",
 							imageUrl: "app/images/carousel/soi-workshop-philippines.jpg"
