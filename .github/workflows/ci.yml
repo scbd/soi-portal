@@ -87,6 +87,9 @@ jobs:
           sleep 10
           docker exec soi curl --retry 10 --retry-delay 5 -v http://localhost:8000/
 
+      - name: Run smoke tests
+        run: docker run --rm ci-build:local npm test
+
       - name: Push image
         if: steps.meta.outputs.push == 'true'
         run: |
