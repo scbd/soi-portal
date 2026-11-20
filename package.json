@@ -12,7 +12,8 @@
   },
   "scripts": {
     "postinstall": "./node_modules/.bin/bower install --config.interactive=false --allow-root",
-    "start": "node server"
+    "start": "node server",
+    "test": "node --test \"test/**/*.test.js\""
   },
   "license": "MIT",
   "private": true,
