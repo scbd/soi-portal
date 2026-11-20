@@ -16,7 +16,7 @@ changes are text, image and link updates in `app/views/`. Keep changes minimal a
 
 Legacy **AngularJS 1.3** (via `angular-flex`) loaded with **RequireJS**, served by a small **Express** server.
 Front-end libraries come from **Bower** (`bower.json`) and are installed into `app/libs/` (gitignored).
-The Docker image runs on **Node 14** (`node:14.3-alpine`).
+The Docker image runs on **Node 26** (`node:26-alpine`); `engines.node` requires a release patched for CVE-2026-111497.
 
 | Path                              | Purpose                                                                                                                      |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -30,11 +30,13 @@ The Docker image runs on **Node 14** (`node:14.3-alpine`).
 
 ## Commands
 
-There is no build step, linter or test suite in this repo.
+There is no build step or linter in this repo. `npm test` runs `node:test` smoke tests (`test/`) that start the
+server and check the main pages, static assets and Node version.
 
 ```sh
 npm install          # postinstall runs `bower install` into app/libs/
 npm start            # node server - http://localhost:8000/
+npm test             # smoke tests (needs `npm install` first for app/libs/)
 ```
 
 | Env var     | Default | Purpose                                                                           |
