@@ -7,11 +7,11 @@ COPY package.json bower.json .bowerrc .npmrc ./
 RUN apk add git curl && \
     yarn install -q
 
-ENV PORT 8000
+ENV PORT=8000
 EXPOSE 8000
 
 ARG VERSION
-ENV VERSION $VERSION
+ENV VERSION=$VERSION
 
 COPY . ./
 
